@@ -1,0 +1,102 @@
+
+<LoginScreen>
+    MDLabel:
+        text: "Welcome!"
+        font_size: app.fonts.size.icon
+        font_name: "Roboto-Bold"
+        pos_hint: {'x': 0.12,'center_y': 0.70}
+        text_color: app.colors.secondary
+        theme_text_color: "Custom"
+    MDFloatLayout:
+        #md_bg_color: app.colors.secondary
+        size_hint_y: .6
+        radius: [40,40,0,0]
+
+    Image:
+        source:'images/fyp3.jpg'
+        pos_hint: {'center_x': 0.5,'center_y': 0.85}
+    MDTextField:
+        id: email
+        hint_text: "email"
+        pos_hint: {'center_x': 0.5,'center_y': 0.55}
+        icon_right: "email"
+        text_color_normal: app.colors.black
+        text_color_focus: app.colors.black
+        hint_text_color_normal: app.colors.black
+        hint_text_color_focus: app.colors.black
+        # font_name_hint_text: app.fonts.body
+        line_color_normal: app.colors.primary
+        line_color_focus: app.colors.black
+        icon_right_color_normal: app.colors.black
+        icon_right_color_focus: app.colors.black
+        # font_name: app.fonts.subheading
+        mode: "fill"
+        radius: [25,0,25,0]
+        size_hint_x: .8
+        active_line: False
+        helper_text_mode: "on_error"
+        on_text: print(self.text)
+        fill_color_normal: app.colors.white
+    MDTextField:
+        id: password
+        hint_text: "password"
+        pos_hint: {'center_x': 0.5,'center_y': 0.41}
+        icon_right: "lock"
+        password: True
+        text_color_normal: app.colors.black
+        text_color_focus: app.colors.black
+        hint_text_color_normal: app.colors.black
+        hint_text_color_focus: app.colors.black
+        # font_name_hint_text: app.fonts.body
+        line_color_normal: app.colors.primary
+        line_color_focus: app.colors.black
+        icon_right_color_normal: app.colors.black
+        icon_right_color_focus: app.colors.black
+        # font_name: app.fonts.subheading
+        mode: "fill"
+        radius: [25,0,25,0]
+        size_hint_x: .8
+        active_line: False
+        helper_text_mode: "on_error"
+        on_text: print(self.text)
+        fill_color_normal: app.colors.white
+    MDIconButton:
+        icon: "eye"
+        pos_hint: {'center_x': 0.78,'center_y': 0.41}
+        on_press:
+            password.password = False if password.password is True else True
+            self.icon = "eye" if password.password == True else "eye-off"
+
+    MDFillRoundFlatButton:
+        text: "Proceed"
+        text_color:app.colors.white
+        md_bg_color: app.colors.secondary
+        font_name: "Roboto-Bold"
+        font_size: app.fonts.size.h4
+        size_hint_y: .08
+        size_hint_x:.2
+        pos_hint: {'center_x': 0.5,'center_y': 0.22}
+        on_press: app.login()
+    MDFillRoundFlatButton:
+        text: "signup"
+        text_color:app.colors.white
+        md_bg_color: app.colors.secondary
+        font_name: "Roboto-Bold"
+        font_size: app.fonts.size.h4
+        size_hint_y: .08
+        size_hint_x:.2
+        pos_hint: {'center_x': 0.5,'center_y': 0.1}
+        on_press: app.change_screen("signup")
+
+    #MDFlatButton:
+        #text: "[u]Recover Password[/u]"
+        #pos_hint: {'center_x': 0.76,'center_y': 0.05}
+        #text_color:app.colors.secondary
+        #md_bg_color: app.colors.white
+        #font_size: app.fonts.size.h5
+        #size_hint_x:.5
+        #on_press: app.change_screen("forgot")
+
+        #markup: True
+
+

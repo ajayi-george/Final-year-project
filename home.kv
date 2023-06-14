@@ -1,0 +1,57 @@
+
+<HomeScreen>
+    MDFloatLayout:
+        size_hint_y: .2
+        md_bg_color: app.colors.secondary
+        pos_hint: {'top': 1.0}
+        MDIconButton:
+            icon: "menu"
+            pos_hint: {'top': 1.0}
+            icon_size: app.fonts.size.icon
+            icon_color: app.colors.white
+            theme_icon_color: "Custom"
+        MDIconButton:
+            icon: "logout"
+            pos_hint: {'right': 1.0}
+            icon_size: app.fonts.size.icon
+            icon_color: app.colors.white
+            theme_icon_color: "Custom"
+            on_press: app.change_screen("login")
+
+
+
+        MDLabel:
+            id: username
+            text: "Hey, George!"
+            font_size: app.fonts.size.icon
+            font_name: "Roboto-Bold"
+            pos_hint: {'x': 0.06,'center_y': 0.35}
+            text_color: app.colors.white
+            theme_text_color: "Custom"
+
+    MDIconButton:
+        icon: "play"
+        pos_hint: {'center_x': .5,'center_y':.5}
+        icon_size: "100sp"
+        icon_color: app.colors.white
+        theme_icon_color: "Custom"
+        on_press: app.dialogs()
+    MDLabel:
+        id: instruction
+        # text: ""
+        markup: True # this enables you to change the textcolor inline. Like i did above. i.e [color=#yourhexcode]your text[/color]
+        font_size: app.fonts.size.h2
+        font_name: "Roboto-Bold"
+        pos_hint: {'x': 0.06,'center_y': 0.7}
+        text_color: app.colors.black
+        size_hint_x:.8
+        theme_text_color: "Custom"
+    # MDLabel:
+    #     text: "[color=#b90000]You may add the necessary things here.[/color]\n\n If you come across anywhere i can be of help, i'm only a text away.\n\n [color=#b90000]Thank You."
+    #     markup: True # this enables you to change the textcolor inline. Like i did above. i.e [color=#yourhexcode]your text[/color]
+    #     font_size: app.fonts.size.h5
+    #     font_name: "Roboto-Bold"
+    #     pos_hint: {'x': 0.06,'center_y': 0.5}
+    #     text_color: app.colors.black
+    #     size_hint_x:.8
+    #     theme_text_color: "Custom"
