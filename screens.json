@@ -1,0 +1,31 @@
+{
+    "login": {
+        "import": "from login import LoginScreen",
+        "object": "LoginScreen()",
+        "kv": "login.kv"
+    },
+    "splash": {
+        "import": "from splash import SplashScreen",
+        "object": "SplashScreen()",
+        "kv": "splash.kv"
+    },
+
+    "home": {
+        "import": "from home import HomeScreen",
+        "object": "HomeScreen()",
+        "kv": "home.kv"
+    },
+    "forgot": {
+        "import": "from forgot import ForgotScreen",
+        "object": "ForgotScreen()",
+        "kv": "forgot.kv"
+    },
+    "signup": {
+        "import": "from signup import SignupScreen",
+        "object": "SignupScreen()",
+        "kv": "signup.kv"
+    }
+
+}
+
+
