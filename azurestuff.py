@@ -1,7 +1,7 @@
 import os
 import azure.cognitiveservices.speech as speechsdk
 
-API_KEY='53b6d63226da4d9ea188abbabb4d1d4d'
+API_KEY='53b
 API_REGION='eastus'
 
 
